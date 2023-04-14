@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ </title>
+
+    
+  </head>
+  
+<center>
+  <body>
+    <div class="slideshow-container">
+      <div class="mySlides1">
+        <img src="image/Banner1-1.png" alt="" width="950px" height="350px">
+      </div>
+      <div class="mySlides1">
+        <img src="image/oppo-sliding-new-moban.webp" alt="" width="950px" height="350px">
+      </div>
+      <div class="mySlides1">
+        <img src="image/690x300-sonyy.webp" alt="" width="950px" height="350px">
+      </div>
+      <div class="mySlides1">
+        <img src="image/Banner1-1.png" alt="" width="950px" height="350px">
+      </div>
+      
+      <a style="left: 10px;" class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+    </div>
+    <p></p>
+      
+      <div id="menu">
+        <ul>
+          <li><a href="index.htm" target="_self">Trang chủ </a></li>
+          <li><a href="sanpham.htm" >Sản Phẩm</a></li>
+          <li><a href="Dangnhap.htm">Đăng Nhập</a></li>
+          <li><a href="Giohang.htm">Giỏ Hàng</a></li>
+        </ul> 
+      </div> 
+    </center>
+      </div>
+    </div>
+    <div style="padding-top: 1px;" class="img2">
+     <img style="float: left ;" src="https://cdn.didongviet.vn/pub/media/mageplaza/bannerslider/banner/image/1/0/1024x340---iphone-8.jpg" alt="" width="700px">
+
+    <img  src="https://cdn.didongviet.vn/pub/media/mageplaza/bannerslider/banner/image/4/8/480x157--xs.jpg" alt="" width="500px">
+      
+</center>
+
+
+
+<div style="text-align: end;">
+  
+<p>Cho phép truy cập vị trí của bạn </p>
+
+<button onclick="getLocation()">Đồng ý </button>
+
+<p id="demo"></p>
+</div>
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "vĩ độ: " + position.coords.latitude + 
+  "<br>Kinh độ: " + position.coords.longitude;
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+</html>
+<script src="js/SliderShow.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link href="css/index.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/sp.css">

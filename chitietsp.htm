@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p img {
+        border: 2px solid white;
+      }
+
+      p img:hover {
+        border: 2px solid red;
+      }
+      .product-container {
+        display: flex;
+        align-items: right;
+      }
+      .product-image {
+        flex: 1;
+        margin-right: 20px;
+        width: 50%;
+      }
+      .product-image img {
+        max-width: 100%;
+      }
+      .product-info {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product-container">
+      <div class="produc-image">
+        <img
+          class="main"
+          id="main-img"
+          src="image/sp1.jpg"
+          alt="Producimage"
+          width="450px"
+        />
+        <p>
+          <img src="image/sp1.jpg" alt="" width="120px" />
+          <img src="image/sp2.jpg" alt="" width="120px" />
+          <img src="image/sp3.jpg" alt="" width="120px" />
+          <img src="image/sp4.jpg" alt="" width="120px" />
+        </p>
+      </div>
+
+      <div class="product-into">
+        <h1 style="color: orangered">Xin chào quý khách</h1>
+        <p>Price : $435.324</p>
+        <button>
+          <img src="./image/giohang.jpg" alt="" width="25px" /> Thêm Vào Giỏ
+          Hàng
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="http://code.jquery.com/jquery-3.5.0.min.js"></script>
+<script>
+  $(() => {
+    $("p img").click(function () {
+      let imgPath = $(this).attr("src");
+      $("#main-img").attr("src", imgPath);
+    });
+  });
+</script>

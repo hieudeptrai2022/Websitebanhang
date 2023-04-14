@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shopping-cart</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <nav>
+        <div class="img-nav">
+          <img src="img/logo.png" alt="" />
+        </div>
+        <div class="content-nav">
+          <ul>
+            <li><a href="index.htm">Trang Chủ</a></li>
+            <li><a href="sanpham.htm">Sản Phẩm</a></li>
+            <li><a href="#">Liên Hệ</a></li>
+            <li><a href="index.htm">Giới Thiệu</a></li>
+          </ul>
+          <form>
+            <input
+              type="text"
+              name="search"
+              placeholder="Tìm kiếm sản phẩm..."
+            />
+            <button type="submit">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+        <!-- The Modal -->
+        <button id="cart">
+          <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+          Giỏ Hàng
+        </button>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Giỏ Hàng</h5>
+              <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+              <div class="cart-row">
+                <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                <span class="cart-price cart-header cart-column">Giá</span>
+                <span class="cart-quantity cart-header cart-column"
+                  >Số Lượng</span
+                >
+              </div>
+              <div class="cart-items"></div>
+              <div class="cart-total">
+                <strong class="cart-total-title">Tổng Cộng:</strong>
+                <span class="cart-total-price">0VNĐ</span>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary close-footer">
+                Đóng
+              </button>
+              <button type="button" class="btn btn-primary order">
+                Thanh Toán
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- content -->
+    <section class="wrapper">
+      <div class="products">
+        <ul>
+          <li class="main-product">
+            <div class="img-product">
+              <img
+                class="img-prd"
+                src="image/sp1.jpg"
+                alt="" width="500px"
+              />
+            </div>
+            <div class="content-product">
+              <h3 class="content-product-h3">Iphone 11 promax</h3>
+              <div class="content-product-deltals">
+                <div class="price">
+                  <span class="money">25000</span>
+                </div>
+                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+              </div>
+            </div>
+          </li>
+          <li class="main-product">
+            <div class="img-product">
+              <img
+                class="img-prd"
+                src="image/sp2.jpg"
+                alt="" width="500px"
+              />
+            </div>
+            <div class="content-product">
+              <h3 class="content-product-h3">
+                Sam sung 
+              </h3>
+              <div class="content-product-deltals">
+                <div class="price">
+                  <span class="money">1299000đ</span>
+                </div>
+                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+              </div>
+            </div>
+          </li>
+          <li class="main-product">
+            <div class="img-product">
+              <img
+                class="img-prd"
+                src="image/sp3.jpg" width="500px"
+                alt=""
+              />
+            </div>
+            <div class="content-product">
+              <h3 class="content-product-h3">
+               Sam sung galaxy
+              </h3>
+              <div class="content-product-deltals">
+                <div class="price">
+                  <span class="money">1599000đ</span>
+                </div>
+                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+              </div>
+            </div>
+          </li>
+          <li class="main-product no-margin">
+            <div class="img-product">
+              <img
+                class="img-prd"
+                src="image/sp4.jpg"
+                alt=""
+              />
+            </div>
+            <div class="content-product">
+              <h3 class="content-product-h3">
+              Oppo 1235
+              </h3>
+              <div class="content-product-deltals">
+                <div class="price">
+                  <span class="money">89000đ</span>
+                </div>
+                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+              </div>
+            </div>
+          </li>
+          <li class="main-product">
+            <div class="img-product">
+              <img
+                class="img-prd"
+                src="image/sp5.jpg"
+                alt=""
+              />
+            </div>
+            <div class="content-product">
+              <h3 class="content-product-h3">
+                Sam sung F1 F2 F15
+              </h3>
+              <div class="content-product-deltals">
+                <div class="price">
+                  <span class="money">2199000đ</span>
+                </div>
+                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+              </div>
+            </div>
+          </li>
+          <li class="main-product">
+            <div class="img-product">
+              <img
+                class="img-prd"
+                src="image/sp6.jpg " width="500px"
+                alt=""
+              />
+            </div>
+            <div class="content-product">
+              <h3 class="content-product-h3">
+                Oppo neo SOntung
+              </h3>
+              <div class="content-product-deltals">
+                <div class="price">
+                  <span class="money">115000đ</span>
+                </div>
+                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+              </div>
+            </div>
+          </li>
+          <li class="main-product">
+            <div class="img-product">
+              <img
+                class="img-prd"
+                src="image/sp5.jpg"
+                alt=""
+              />
+            </div>
+            <div class="content-product">
+              <h3 class="content-product-h3">
+                Sam sung F1 F2 F15
+              </h3>
+              <div class="content-product-deltals">
+                <div class="price">
+                  <span class="money">1295000đ</span>
+                </div>
+                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+              </div>
+            </div>
+          </li>
+          <li class="main-product no-margin">
+            <div class="img-product">
+              <img
+                class="img-prd"
+                src="image/sp5.jpg"
+                alt=""
+              />
+            </div>
+            <div class="content-product">
+              <h3 class="content-product-h3">
+                Sam sung F1 F2 F15
+              </h3>
+              <div class="content-product-deltals">
+                <div class="price">
+                  <span class="money">85000đ</span>
+                </div>
+                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- content -->
+    <section class="wrapper">
+      <div class="products">
+        <ul>
+          <li class="main-product">
+            <div class="img-product">
+              <img
+                class="img-prd"
+                src="image/sp5.jpg"
+                alt=""
+              />
+            </div>
+            <div class="content-product">
+              <h3 class="content-product-h3">
+                Sam sung F1 F2 F15
+              </h3>
+              <div class="content-product-deltals">
+                <div class="price">
+                  <span class="money">25000đ</span>
+                </div>
+                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+              </div>
+            </div>
+          </li>
+          <li class="main-product">
+            <div class="img-product">
+              <img
+                class="img-prd"
+                src="image/sp5.jpg"
+                alt=""
+              />
+            </div>
+            <div class="content-product">
+              <h3 class="content-product-h3">
+                Sam sung F1 F2 F15
+              </h3>
+              </h3>
+              <div class="content-product-deltals">
+                <div class="price">
+                  <span class="money">1299000đ</span>
+                </div>
+                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+              </div>
+            </div>
+          </li>
+          <li class="main-product">
+            <div class="img-product">
+              <img
+                class="img-prd"
+                src="image/sp5.jpg"
+                alt=""
+              />
+            </div>
+            <div class="content-product">
+              <h3 class="content-product-h3">
+                Sam sung F1 F2 F15
+              </h3>
+            </div>
+            <div class="content-product">
+              <h3 class="content-product-h3">
+                Máy Bơm Chìm Hộ Gia Đình QDX 1500W 220VAC 40L/1min H=8m
+              </h3>
+              <div class="content-product-deltals">
+                <div class="price">
+                  <span class="money">1599000đ</span>
+                </div>
+                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+              </div>
+            </div>
+          </li>
+          <li class="main-product no-margin">
+            <div class="img-product">
+              <img
+                class="img-prd"
+                src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/module-diy-sac-khong-day-5.jpg?v=1570011041000"
+                alt=""
+              />
+            </div>
+            <div class="content-product">
+              <h3 class="content-product-h3">
+                Module DIY Sạc Không Dây Qi IOS/Androi - Bộ phát V2
+              </h3>
+              <div class="content-product-deltals">
+                <div class="price">
+                  <span class="money">89000đ</span>
+                </div>
+                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+              </div>
+            </div>
+          </li>
+          <li class="main-product">
+            <div class="img-product">
+              <img
+                class="img-prd"
+                src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/bo-dieu-chinh-dien-ap-sdty-200p.jpg?v=1560155769920"
+                alt=""
+              />
+            </div>
+            <div class="content-product">
+              <h3 class="content-product-h3">
+                Bộ Điều Chỉnh Điện Áp CHLVFU SDTY-200P 20KW 200A (BH 06 Tháng)
+              </h3>
+              <div class="content-product-deltals">
+                <div class="price">
+                  <span class="money">2199000đ</span>
+                </div>
+                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+              </div>
+            </div>
+          </li>
+          <li class="main-product">
+            <div class="img-product">
+              <img
+                class="img-prd"
+                src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/isd1760-thu-am-thanh-phat-am-thanh-2.jpg?v=1568951032960"
+                alt=""
+              />
+            </div>
+            <div class="content-product">
+              <h3 class="content-product-h3">
+                Module ISD1760 Thu Âm Thanh - Phát Âm Thanh 75s
+              </h3>
+              <div class="content-product-deltals">
+                <div class="price">
+                  <span class="money">115000đ</span>
+                </div>
+                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+              </div>
+            </div>
+          </li>
+          <li class="main-product">
+            <div class="img-product">
+              <img
+                class="img-prd"
+                src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/new-arrival-b-plus-64-bit-quad-2.jpg?v=1568277329707"
+                alt=""
+              />
+            </div>
+            <div class="content-product">
+              <h3 class="content-product-h3">
+                Raspberry Pi 3 E14 Model B Plus B+ 2.4G/5G Bluetooth
+              </h3>
+              <div class="content-product-deltals">
+                <div class="price">
+                  <span class="money">1295000đ</span>
+                </div>
+                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+              </div>
+            </div>
+          </li>
+          <li class="main-product no-margin">
+            <div class="img-product">
+              <img
+                class="img-prd"
+                src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/module-iot-esp8266-esp-12e-ch340-3.jpg?v=1565950165000"
+                alt=""
+              />
+            </div>
+            <div class="content-product">
+              <h3 class="content-product-h3">
+                Module IOT ESP8266 ESP-12E CH340 V3
+              </h3>
+              <div class="content-product-deltals">
+                <div class="price">
+                  <span class="money">85000đ</span>
+                </div>
+                <button type="button" class="btn btn-cart">Thêm Vào Giỏ</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <header>
+      <nav>
+        <!-- bắt đầu nav-mobile -->
+        <div class="nav-mobile">
+          <div class="icon-mobile" id="btnmenu">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+          <div class="item_menu" id="menutop">
+            <form>
+              <input
+                type="text"
+                name="search"
+                placeholder="Tìm kiếm sản phẩm..."
+              />
+              <button type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+            <ul>
+              <li><a href="#">Trang Chủ</a></li>
+              <li><a href="#">Sản Phẩm</a></li>
+              <li><a href="#">Liên Hệ</a></li>
+              <li><a href="#">Giới Thiệu</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- kết thúc nav-mobile -->
+        ....... ....... ....... .......
+      </nav>
+    </header>
+    // modal
+   <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+                            <div class="cart-row">
+                            <div class="cart-item cart-column">
+                                <img class="cart-item-image" src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/sualai.jpg?v=1573720306000" width="100" height="100">
+                                <span class="cart-item-title">Mũi Hàn 500</span>
+                            </div>
+                            <span class="cart-price cart-column">25000đ</span>
+                            <div class="cart-quantity cart-column">
+                                <input class="cart-quantity-input" type="number" value="1">
+                                <button class="btn btn-danger" type="button">Xóa</button>
+                            </div>
+                        </div>
+                        <div class="cart-row">
+                            <div class="cart-item cart-column">
+                                <img class="cart-item-image" src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/sp1-a45a32a1-38d4-4a8a-9c37-e936013858b2.jpg?v=1575877003000" width="100" height="100">
+                                <span class="cart-item-title">Máy Bơm Chìm Hộ Gia Đình QDX 1500W 220VAC 40L/1min H=8m</span>
+                            </div>
+                            <span class="cart-price cart-column">1599000đ</span>
+                            <div class="cart-quantity cart-column">
+                                <input class="cart-quantity-input" type="number" value="2">
+                                <button class="btn btn-danger" type="button">Xóa</button>
+                            </div>
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price">3223000VNĐ</span>
+                        </div>
+                    </div>
+
+  </body>
+</html>
+<style>
+  /* cart */
+.cart-header {
+  font-weight: bold;
+  font-size: 1.25em;
+  color: #333;
+}
+
+.cart-column {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-right: 1.5em;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.cart-row {
+  display: flex;
+}
+
+.cart-item {
+  width: 45%;
+}
+
+.cart-price {
+  width: 20%;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.cart-quantity {
+  width: 35%;
+}
+
+.cart-item-title {
+  color: #333;
+  margin-left: .5em;
+  font-size: 1.2em;
+}
+
+.cart-item-image {
+  width: 75px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.btn-danger {
+  color: white;
+  background-color: #EB5757;
+  border: none;
+  border-radius: .3em;
+  font-weight: bold;
+}
+
+.btn-danger:hover {
+  background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+  height: 34px;
+  width: 50px;
+  border-radius: 5px;
+  border: 1px solid #56CCF2;
+  background-color: #eee;
+  color: #333;
+  padding: 0;
+  text-align: center;
+  font-size: 1.2em;
+  margin-right: 25px;
+}
+
+.cart-row:last-child {
+  border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+  border: none;
+}
+
+.cart-total {
+  text-align: end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.cart-total-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: black;
+  margin-right: 20px;
+}
+
+.cart-total-price {
+  color: #333;
+  font-size: 1.1em;
+}
+  /* nav mobile */
+  .nav-mobile {
+    display: none;
+  }
+
+  .nav-mobile .icon-mobile {
+    padding: 0.5rem;
+    font-size: 35px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    outline: none;
+  }
+
+  .nav-mobile .item_menu {
+    background: #f1df11;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    display: none;
+    padding-bottom: 1rem;
+  }
+
+  .item_menu ul li a {
+    color: #43433e;
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.05rem;
+  }
+
+  .item_menu ul li a:hover {
+    color: #fff;
+  }
+
+  .item_menu form {
+    margin: 0 1rem;
+    position: relative;
+  }
+
+  .item_menu form input {
+    width: 100%;
+    border: none;
+    background: #fff;
+    padding: 7px;
+    outline: none;
+    border-radius: 12px;
+  }
+
+  .item_menu form button {
+    padding: 5px;
+    border-radius: 12px;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    border: none;
+    outline: none;
+    background: #fff;
+  }
+  /*mobile*/
+  @media only screen and (min-width: 240px) and (max-width: 480px) {
+    /* nav */
+    nav .content-nav {
+      display: none;
+    }
+
+    nav {
+      position: fixed !important;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      padding: 0;
+    }
+
+    .nav-mobile {
+      display: flex;
+    }
+
+    .img-nav {
+        
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .img-nav img {
+      padding-top: 0.5rem;
+      vertical-align: middle;
+      width: 90%;
+    }
+
+    .content-nav,
+    .item_menu form button {
+      right: 10px;
+    }
+
+    /* wrapper */
+    .wrapper {
+      padding: 1rem;
+    }
+
+    .products {
+      margin-top: 3rem;
+    }
+
+    .products ul .main-product {
+      width: 100%;
+    }
+
+    /* modal */
+    .modal-content {
+      width: 95%;
+    }
+
+    .cart-item-title {
+      font-size: 0.6em;
+    }
+
+    .cart-column {
+      margin-right: 0.5em;
+    }
+
+    .cart-price {
+      margin-right: 1rem;
+    }
+
+    #cart {
+      margin: 0.5rem;
+      padding: 3px;
+    }
+  }
+  /*tablet*/
+  @media (min-width: 480px) and (max-width: 768px) {
+    .wrapper {
+      padding: 1.5rem;
+    }
+
+    .img-nav img {
+      vertical-align: middle;
+      width: 100%;
+    }
+
+    nav .content-nav ul li a {
+      font-size: 12px;
+      padding: 0px 8px;
+    }
+
+    nav .content-nav {
+      width: 100%;
+    }
+
+    #cart {
+      font-size: 12px;
+      margin-left: 0.3rem;
+      padding: 0;
+    }
+
+    .products ul .main-product {
+      width: 31%;
+    }
+
+    .main-product .content-product .content-product-deltals .price {
+      font-size: 18px;
+    }
+
+    .products ul .no-margin {
+      margin-right: 1rem;
+    }
+
+    .cart-item-title {
+      font-size: 0.5em;
+    }
+
+    .cart-column {
+      margin-right: 0.5em;
+    }
+
+    .cart-price {
+      margin-right: 1rem;
+    }
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  li {
+    list-style: none;
+  }
+
+  /* header */
+  nav {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    background: #f1df11;
+  }
+
+  nav .content-nav {
+    display: flex;
+    line-height: 2rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 60%;
+  }
+
+  nav .content-nav ul {
+    display: flex;
+  }
+
+  nav .content-nav ul li a {
+    text-decoration: none;
+    color: #43433e;
+    text-transform: uppercase;
+    padding: 0 15px;
+    font-weight: 800;
+  }
+
+  nav .content-nav ul li a:hover {
+    color: #fff;
+  }
+
+  .content-nav form {
+    position: relative;
+  }
+
+  .content-nav form input {
+    border: none;
+    background: #fff;
+    padding: 7px;
+    outline: none;
+    border-radius: 12px;
+  }
+
+  .content-nav form button {
+    padding: 5px;
+    border-radius: 12px;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    border: none;
+    outline: none;
+    background: #fff;
+  }
+  
+  .img-product{
+    display: inline-block;
+    padding-left: 10px;
+  }
+
+  /* modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content {
+    margin: 0 auto;
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
+  .modal-footer {
+    display: flex;
+    border-top: 1px solid #aaaaaa;
+    padding: 1rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    border-top: 1px solid #aaaaaa;
+    padding: 1rem;
+  }
+
+  .modal-footer > :not(:first-child) {
+    margin-left: 0.25rem;
+  }
+
+  .btn {
+    cursor: pointer;
+    outline: none;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-secondary {
+    color: #292b2c;
+    background-color: #fff;
+    border-color: #ccc;
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-color: #0275d8;
+    border-color: #0275d8;
+  }
+
+  .modal-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #aaaaaa;
+    padding: 1rem;
+  }
+
+  h5.modal-title {
+    font-size: 1.5rem;
+  }
+
+  .close {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #cart {
+    font-size: 15px;
+    color: #fff;
+    background: #c7b200;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    margin-left: 1rem;
+    padding: 12px;
+    cursor: pointer;
+  }
+
+  #cart:hover {
+    border-color: #fff;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  li {
+    list-style: none;
+  }
+
+  /* header */
+  nav {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    background: #f1df11;
+  }
+
+  nav .content-nav {
+    display: flex;
+    line-height: 2rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 60%;
+  }
+
+  nav .content-nav ul {
+    display: flex;
+  }
+
+  nav .content-nav ul li a {
+    text-decoration: none;
+    color: #43433e;
+    text-transform: uppercase;
+    padding: 0 15px;
+    font-weight: 800;
+  }
+
+  nav .content-nav ul li a:hover {
+    color: #fff;
+  }
+
+  .content-nav form {
+    position: relative;
+  }
+
+  .content-nav form input {
+    border: none;
+    background: #fff;
+    padding: 7px;
+    outline: none;
+    border-radius: 12px;
+  }
+
+  .content-nav form button {
+    padding: 5px;
+    border-radius: 12px;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    border: none;
+    outline: none;
+    background: #fff;
+  }
+
+  /* modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content {
+    margin: 0 auto;
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
+  .modal-footer {
+    display: flex;
+    border-top: 1px solid #aaaaaa;
+    padding: 1rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    border-top: 1px solid #aaaaaa;
+    padding: 1rem;
+  }
+
+  .modal-footer > :not(:first-child) {
+    margin-left: 0.25rem;
+  }
+
+  .btn {
+    cursor: pointer;
+    outline: none;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-secondary {
+    color: #292b2c;
+    background-color: #fff;
+    border-color: #ccc;
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-color: #0275d8;
+    border-color: #0275d8;
+  }
+
+  .modal-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #aaaaaa;
+    padding: 1rem;
+  }
+
+  h5.modal-title {
+    font-size: 1.5rem;
+  }
+  /*tablet*/
+@media (min-width:480px) and (max-width:768px) {
+
+.wrapper {
+    padding: 1.5rem;
+}
+
+.img-nav img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+nav .content-nav ul li a {
+    font-size: 12px;
+    padding: 0px 8px;
+}
+
+nav .content-nav {
+    width: 100%;
+}
+
+#cart {
+    font-size: 12px;
+    margin-left: 0.3rem;
+    padding: 0;
+}
+
+.products ul .main-product {
+    width: 31%;
+}
+
+.main-product .content-product .content-product-deltals .price {
+    font-size: 18px;
+}
+
+.products ul .no-margin {
+    margin-right: 1rem;
+}
+
+.cart-item-title {
+    font-size: 0.5em;
+}
+
+.cart-column {
+    margin-right: 0.5em;
+}
+
+.cart-price {
+    margin-right: 1rem;
+}
+}
+
+  .close {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #cart {
+    font-size: 15px;
+    color: #fff;
+    background: #c7b200;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    margin-left: 1rem;
+    padding: 12px;
+    cursor: pointer;
+  }
+
+  #cart:hover {
+    border-color: #fff;
+  }
+  /* footer */
+  .footer-item {
+    padding: 0.5rem 2rem;
+    background: #f1df11;
+    display: flex;
+  }
+
+  .footer-item .img-footer {
+    align-items: center;
+    display: flex;
+  }
+
+  .footer-item .img-footer img {
+    width: 100%;
+  }
+
+  .footer-item .social-footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .footer-item .social-footer li a {
+    color: #000000;
+    font-size: 2rem;
+  }
+
+  .footer-item .social-footer li:last-child {
+    margin-left: 0.5rem;
+  }
+</style>
+
+<script>
+  // Modal
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("cart");
+  var close = document.getElementsByClassName("close")[0];
+  // tại sao lại có [0] như  thế này bởi vì mỗi close là một html colection nên khi mình muốn lấy giá trị html thì phải thêm [0].
+  var close_footer = document.getElementsByClassName("close-footer")[0];
+  var order = document.getElementsByClassName("order")[0];
+  btn.onclick = function () {
+    modal.style.display = "block";
+  };
+  close.onclick = function () {
+    modal.style.display = "none";
+  };
+  close_footer.onclick = function () {
+    modal.style.display = "none";
+  };
+  order.onclick = function () {
+    alert("Cảm ơn bạn đã thanh toán đơn hàng");
+  };
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+  // menu mobile
+  var btn_menu = document.getElementById("btnmenu");
+  btn_menu.addEventListener("click", function () {
+    var item_menu = document.getElementById("menutop");
+    if (item_menu.style.display === "block") {
+      item_menu.style.display = "none";
+    } else {
+      item_menu.style.display = "block";
+    }
+  });
+  // xóa cart
+var remove_cart = document.getElementsByClassName("btn-danger");
+for (var i = 0; i < remove_cart.length; i++) {
+  var button = remove_cart[i]
+  button.addEventListener("click", function () {
+    var button_remove = event.target
+    button_remove.parentElement.parentElement.remove()
+  })
+}
+// update cart 
+function updatecart() {
+  var cart_item = document.getElementsByClassName("cart-items")[0];
+  var cart_rows = cart_item.getElementsByClassName("cart-row");
+  var total = 0;
+  for (var i = 0; i < cart_rows.length; i++) {
+    var cart_row = cart_rows[i]
+    var price_item = cart_row.getElementsByClassName("cart-price ")[0]
+    var quantity_item = cart_row.getElementsByClassName("cart-quantity-input")[0]
+    var price = parseFloat(price_item.innerText)// chuyển một chuổi string sang number để tính tổng tiền.
+    var quantity = quantity_item.value // lấy giá trị trong thẻ input
+    total = total + (price * quantity)
+  }
+  document.getElementsByClassName("cart-total-price")[0].innerText = total + 'VNĐ'
+  // Thay đổi text = total trong .cart-total-price. Chỉ có một .cart-total-price nên mình sử dụng [0].
+}
+// thay đổi số lượng sản phẩm
+var quantity_input = document.getElementsByClassName("cart-quantity-input");
+for (var i = 0; i < quantity_input.length; i++) {
+  var input = quantity_input[i];
+  input.addEventListener("change", function (event) {
+    var input = event.target
+    if (isNaN(input.value) || input.value <= 0) {
+      input.value = 1;
+    }
+    updatecart()
+  })
+}
+// Thêm vào giỏ
+var add_cart = document.getElementsByClassName("btn-cart");
+for (var i = 0; i < add_cart.length; i++) {
+  var add = add_cart[i];
+  add.addEventListener("click", function (event) {
+
+    var button = event.target;
+    var product = button.parentElement.parentElement;
+    var img = product.parentElement.getElementsByClassName("img-prd")[0].src
+    var title = product.getElementsByClassName("content-product-h3")[0].innerText
+    var price = product.getElementsByClassName("price")[0].innerText
+    addItemToCart(title, price, img)
+    // Khi thêm sản phẩm vào giỏ hàng thì sẽ hiển thị modal
+    modal.style.display = "block";
+    
+    updatecart()
+  })
+}
+
+function addItemToCart(title, price, img) {
+  var cartRow = document.createElement('div')
+  cartRow.classList.add('cart-row')
+  var cartItems = document.getElementsByClassName('cart-items')[0]
+  var cart_title = cartItems.getElementsByClassName('cart-item-title')
+
+  for (var i = 0; i < cart_title.length; i++) {
+    if (cart_title[i].innerText == title) {
+      alert('Sản Phẩm Đã Có Trong Giỏ Hàng')
+      return
+    }
+  }
+
+  var cartRowContents = `
+  <div class="cart-item cart-column">
+      <img class="cart-item-image" src="${img}" width="100" height="100">
+      <span class="cart-item-title">${title}</span>
+  </div>
+  <span class="cart-price cart-column">${price}</span>
+  <div class="cart-quantity cart-column">
+      <input class="cart-quantity-input" type="number" value="1">
+      <button class="btn btn-danger" type="button">Xóa</button>
+  </div>`
+  cartRow.innerHTML = cartRowContents
+  cartItems.append(cartRow)
+  cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', function () {
+    var button_remove = event.target
+    button_remove.parentElement.parentElement.remove()
+    updatecart()
+  })
+  cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', function (event) {
+    var input = event.target
+    if (isNaN(input.value) || input.value <= 0) {
+      input.value = 1;
+    }
+    updatecart()
+  })
+}
+</script>
